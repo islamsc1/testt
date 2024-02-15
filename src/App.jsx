@@ -11,7 +11,7 @@ function App() {
   const [popupData, setPopupData] = useState(null);
 
   useEffect(() => {
-    axios.get("https://19fd988d-e8e1-437f-bec9-9b71e2cfbb96-00-14ok8n0r02dax.kirk.replit.dev/getLectures")
+    axios.get("https://good-jade-bullfrog-hat.cyclic.app/getLectures")
       .then((response) => setLectures(response.data))
       .catch((error) => console.error("Error fetching lectures:", error));
   }, []);
@@ -19,7 +19,7 @@ function App() {
  const handlePopupOpen = (weekId) => {
     setSelectedWeek(weekId);
     // Fetch data based on the selected weekId from MongoDB
-    axios.get(`https://19fd988d-e8e1-437f-bec9-9b71e2cfbb96-00-14ok8n0r02dax.kirk.replit.dev/getWeek/${weekId}`)
+    axios.get(`https://good-jade-bullfrog-hat.cyclic.app/getWeek/${weekId}`)
       .then((response) => setPopupData(response.data))
       .catch((error) => console.error('Error fetching popup data:', error));
   };
