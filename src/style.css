@@ -1,0 +1,409 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --mainColor: #0099cc;
+  --darkColor: rgb(54, 56, 56);
+  --darkColorr: rgb(36, 37, 37);
+}
+#preload {
+  background: #eeedf0 url(/imgs/alaen.webp) no-repeat center center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+body {
+  background-color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  direction: ltr;
+}
+.header {
+  width: 100%;
+  height: 100px;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  margin: 20px auto;
+  margin-bottom: 0;
+  margin-top: 0;
+  /* z-index: -1; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.header .background {
+  background: #006400;
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+}
+.header .top {
+  background: #000;
+  width: 100%;
+  height: 25px;
+  z-index: 1;
+}
+.header .middle {
+  background: white;
+  width: 100%;
+  height: 50px;
+  z-index: 1;
+}
+.header .triangle {
+  background: auto;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 50px solid red;
+  z-index: 2;
+  position: relative;
+  top: -76px;
+  left: 0;
+}
+.header .pal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 2px 2px 5px #000000;
+  font-size: 19px;
+}
+header {
+  width: 100%;
+  height: 100px;
+  background-image: url(https://elzero.org/wp-content/themes/elzero/era/imgs/background-pattern.jpg);
+  position: relative;
+  text-align: center;
+  color: white;
+  margin: 20px auto;
+  margin-bottom: 0;
+  margin-top: 0;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0099cc;
+  opacity: 0.95;
+  z-index: -1;
+}
+header h1 {
+  font-size: 25%;
+  font-size: 100%;
+}
+.container {
+  background-color: #ddd;
+  width: 100%;
+  margin: 10px auto;
+  flex: 1;
+  box-shadow: 1px 2px 9px 0px #757575;
+  border-radius: 25px;
+}
+/* Style the month button to span all 4 columns */
+.monthbtn {
+  margin-top: 10px;
+  background-color: #0099cc;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 0; /* Remove border radius for the button */
+  text-transform: uppercase;
+  border: #0099cc solid 5px;
+  color: white;
+  font-weight: bold;
+  width: 97%;
+  margin: auto 5px;
+  box-shadow: 0px 1px 1px #878787;
+  font-size: large;
+  border-radius: 25px;
+  margin-bottom: 5px;
+}
+.month {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 10px;
+  background-color: #ddd;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  transition: opacity 1s ease-in, height 1s ease-in, all 1s ease-in;
+  transition-delay: 0.1s;
+  min-height: 100px; /* Adjust the value as needed */
+}
+.month.open {
+  position: unset;
+  opacity: 1;
+  height: unset;
+  display: grid;
+}
+.week {
+  padding: 10px;
+  background-color: #fff;
+  position: relative;
+  counter-increment: weeks;
+  border-radius: 10px;
+}
+/* was trying to add tooltip
+.new.week .new {
+  content: "!";
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: #e91e63;
+  border-radius: 50%;
+  color: white;
+  z-index: 1;
+}
+.new.week .new:hover {
+  display: none;
+}
+*/
+.week:hover {
+  box-shadow: 1px 2px 9px 0px #757575;
+}
+.week a.fill-div {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.week .h {
+  margin-left: 5px;
+  margin-top: 5px;
+  padding: 10px;
+}
+.week .h .h1 {
+  font-weight: bold;
+  color: black;
+  display: block;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.week .h .h2 {
+  margin: 10px 0 0;
+  font-size: medium;
+}
+.week .d {
+  margin-top: 5px;
+  margin-bottom: 3px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+.week .d .d1 {
+  width: 100px;
+}
+.week .s {
+  padding-left: 5px;
+  padding-bottom: 5px;
+  padding: 10px;
+}
+.week .s .by {
+  background-color: #8d8d96;
+  color: white;
+  padding: 5px 7px;
+  border-radius: 25px;
+}
+
+.week .s .s1 {
+  margin-top: 5px;
+  display: block;
+  font-size: medium;
+}
+.week .d .d1 .day {
+  display: block;
+  font-size: x-large;
+  font-weight: bold;
+  padding-left: 4px;
+}
+.week .d .d1 .day a {
+  font-size: smaller;
+  text-decoration: none;
+}
+span.by.padd {
+  background-color: #0099cc !important;
+  line-height: 2;
+}
+footer {
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: white;
+  padding: 27px;
+  border-color: #332d2d;
+  border-width: 10px;
+  background: #0a0a0ae3;
+  border-radius: 10px;
+}
+footer .pal {
+  text-shadow: 2px 2px 20px #9100ff;
+  margin-bottom: 10px;
+}
+.clear {
+  clear: both;
+}
+/* scroll */
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0099cc;
+  border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0099cc;
+}
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+.popup {
+  /* display: none; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.popup-content {
+  background: #eee;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+.popup-content::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 31px solid red;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  position: absolute;
+  left: 50%;
+  transition: transform 0.5s;
+  top: -15%;
+  transform: translateX(-50%);
+  margin-bottom: 8px;
+}
+
+.close {
+  position: absolute;
+  top: -5px;
+  right: 4px;
+  cursor: pointer;
+  font-size: 30px;
+  background-color: unset;
+  border: unset;
+}
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 2px 2px;
+}
+td {
+  background-color: #ddd;
+}
+th,
+td {
+  padding: 8px;
+  text-align: center;
+}
+th {
+  background-color: #404040;
+  color: white;
+}
+td a {
+  display: block;
+  background-color: #e91e63;
+  padding: 5px 10px;
+  text-decoration: none;
+  margin: 5px 0;
+  border-radius: 10px;
+  color: white;
+}
+.padding {
+  padding: 10px;
+}
+.update-section {
+  background-color: #1f1f2a;
+  color: #fff;
+  padding: 20px;
+  border: 2px solid #1d667e;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.update-section h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.update-section ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  list-style: none;
+}
+
+.update-section li {
+  margin-bottom: 10px;
+}
+
+.update-section strong {
+  color: #ddd;
+}
+caption {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
