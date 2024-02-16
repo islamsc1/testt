@@ -16,12 +16,12 @@ function App() {
 
   const handlePopupOpen = (weekId) => {
     setSelectedWeek(weekId);
-<<<<<<< HEAD
-    axios.get(`http://localhost:3001/getWeek/${weekId}`)
-=======
+
+    axios.get(`https://good-jade-bullfrog-hat.cyclic.app/${weekId}`)
+
     // Fetch data based on the selected weekId from MongoDB
     axios.get(`https://good-jade-bullfrog-hat.cyclic.app/getWeek/${weekId}`)
->>>>>>> bfd896c028328c0ffb88170f29b259bff9161b0b
+
       .then((response) => setPopupData(response.data))
       .catch((error) => console.error('Error fetching popup data:', error));
   };
