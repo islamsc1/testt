@@ -1,12 +1,20 @@
+<<<<<<< HEAD
+// main.jsx
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.jsx';
+=======
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 // import './index.css'
 
+>>>>>>> bfd896c028328c0ffb88170f29b259bff9161b0b
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const root = document.getElementById('root');
+
+ReactDOM.createRoot(root).render(
   <React.StrictMode>
-    <button class="monthbtn" id="m10Button">October 10/2023</button>
     <App />
   </React.StrictMode>,
-)
+);
