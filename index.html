@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!doctype html>
 <html lang="en">
 
@@ -11,41 +12,141 @@
 
 <body>
   <div id="preload"></div>
+  <div class="header">
+    <div class="background">
+      <div class="pal">
+        <span>Do not forget to pray for</span>
+        <p style="visibility: hidden">1</p>
+        <span style="color: #e4312b">Pal</span>
+        <span style="color: #000000">es</span>
+        <span style="color: #ffffff">ti</span>
+        <span style="color: #149954">ne</span>
+      </div>
+      <div class="top"></div>
+      <div class="middle"></div>
+      <div class="triangle"></div>
+    </div>
+  </div>
+  <header>
+    <h1>All English Dept. lectures</h1>
+  </header>
   <div class="container" id="root">
     <!-- <button class="monthbtn" id="m10Button">October 10/2023</button> -->
     <!-- <div class="month open" id="m10">
 
     </div> -->
   </div>
+  <footer class="footer" style="text-align: center">
+    <!-- <div class="pal">
+      <span>Do not forget to pray for</span>
+      <span style="color: #e4312b">Pal</span>
+      <span style="color: #000000">es</span>
+      <span style="color: #ffffff">ti</span>
+      <span style="color: #149954">ne</span>
+    </div> -->
+    <div style="font-size: 15px">
+      <span style="font-size: 25px; font-weight: bold">Big </span> Thanks to
+      the people who shared these lectures
+    </div>
+    <br />
+    <span>Made with <span style="color: pink">love</span> by
+      <a href="https://facebook.com/islamsc1" style="text-decoration: none; color: #9100ff">Islam</a></span>
+  </footer>
   <script type="module" src="/src/main.jsx"></script>
+<<<<<<< HEAD
+  <script>
+    function delay(ms) {
+      return new Promise((resolve) => setTimeout(resolve, ms));
+    }
+
+    var styleContent = `
+=======
   <script nomodule src="/js/main.js">
 function delay(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
   var styleContent = `
+>>>>>>> bfd896c028328c0ffb88170f29b259bff9161b0b
   .popup-content::before {
     transform: translateX(-50%) translateY(30%) ;
   }
   `;
+<<<<<<< HEAD
+
+    var styleContent1 = `
+=======
   
   var styleContent1 = `
+>>>>>>> bfd896c028328c0ffb88170f29b259bff9161b0b
   .popup-content::before {
     transform: translateX(-50%);
   }
   `;
+<<<<<<< HEAD
+    var styleContent2 = `
+=======
   var styleContent2 = `
+>>>>>>> bfd896c028328c0ffb88170f29b259bff9161b0b
   .popup-content::before {
     border-top: 31px solid transparent;
   
   }
   `;
+<<<<<<< HEAD
+    var styleContent3 = `
+=======
   var styleContent3 = `
+>>>>>>> bfd896c028328c0ffb88170f29b259bff9161b0b
   .popup-content::before {
     border-top: 31px solid red;
   
   }
   `;
+<<<<<<< HEAD
+
+    document.querySelectorAll(".monthbtn").forEach(function (button) {
+      button.addEventListener("click", function () {
+        const targetId = button.id.replace("Button", "");
+        toggleDiv(targetId);
+      });
+    });
+
+    function toggleDiv(targetId) {
+      const div = document.getElementById(targetId);
+
+      if (div.classList.contains("open")) {
+        div.classList.remove("open");
+      } else {
+        div.classList.add("open");
+      }
+    }
+
+    var loader = document.getElementById("preload");
+    let loaded = false;
+    let enoughTimePassed = false;
+
+    window.addEventListener("load", function () {
+      if (enoughTimePassed) {
+        hidePreloader();
+      }
+      loaded = true;
+    });
+
+    setTimeout(() => {
+      if (loaded) {
+        hidePreloader();
+      }
+      enoughTimePassed = true;
+    }, 1000);
+
+    function hidePreloader() {
+      document.getElementById("preload").remove();
+    }
+
+
+  </script>
+=======
   
   document.querySelectorAll(".monthbtn").forEach(function (button) {
     button.addEventListener("click", function () {
@@ -128,6 +229,7 @@ function delay(ms) {
   
 
 </script>
+>>>>>>> bfd896c028328c0ffb88170f29b259bff9161b0b
   <style>
     #preload {
       background: #eeedf0 url(/imgs/alaen.webp) no-repeat center center;
@@ -147,6 +249,7 @@ function delay(ms) {
 
     }
   </style>
+
 </body>
 
 </html>
