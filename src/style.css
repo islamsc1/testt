@@ -121,27 +121,28 @@ header h1 {
   border-radius: 25px;
 }
 .getmonth {
-  border: unset;
-  width: 25vh;
-  margin-top: 2vh;
-  background-color: #09c;
-  padding: 10px;
-  margin-right: 10px;
-  border: #0099cc solid 5px;
-  color: white;
-  font-weight: bold;
-  margin: auto 5px;
-  box-shadow: 0px 1px 1px #878787;
-  font-size: large;
-  border-radius: 25px;
-  margin-top: 1vh;
-  width: 30vh;
+  border:unset;
+  width:25vh;
+  margin-top:2vh;
+  background-color:#09c;
+  padding:10px;
+  border:#0099cc solid 5px;
+  color:#fff;
+  font-weight:700;
+  margin:auto 5px;
+  box-shadow:0 1px 1px #878787;
+  font-size:large;
+  border-radius:25px;
+  margin-top:1vh;
+  width:30vh;
+  cursor:pointer
+
+}
+@media only screen and (max-width: 600px) {
+  .getmonth {
+    width:20vh
   }
-@media all and (min-width:660px) and (max-width: 100px) {
-    .getmonth {
-      width: 27vh;
-    }
-  }
+}
 /* Style the month button to span all 4 columns */
 .monthbtn {
   margin-top: 10px;
