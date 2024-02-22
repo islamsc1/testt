@@ -9,7 +9,7 @@ function App() {
   const [currentMonth, setCurrentMonth] = useState('February'); // Default starting month
 
   useEffect(() => {
-    axios.get("https://good-jade-bullfrog-hat.cyclic.app/getLectures")
+    axios.get("https://zealous-bikini-ant.cyclic.app/getLectures")
       .then((response) => setLectures(response.data))
       .catch((error) => console.error("Error fetching lectures:", error));
   }, []);
@@ -17,10 +17,10 @@ function App() {
   const handlePopupOpen = (weekId) => {
     setSelectedWeek(weekId);
 
-    axios.get(`https://good-jade-bullfrog-hat.cyclic.app/${weekId}`)
+   // axios.get(`https://good-jade-bullfrog-hat.cyclic.app/${weekId}`)
 
     // Fetch data based on the selected weekId from MongoDB
-    axios.get(`https://good-jade-bullfrog-hat.cyclic.app/getWeek/${weekId}`)
+    axios.get(`https://zealous-bikini-ant.cyclic.app/getWeek/${weekId}`)
 
       .then((response) => setPopupData(response.data))
       .catch((error) => console.error('Error fetching popup data:', error));
