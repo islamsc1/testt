@@ -9,7 +9,7 @@ function App() {
   const [currentMonth, setCurrentMonth] = useState('February'); // Default starting month
 
   useEffect(() => {
-    axios.get("http://fi1.bot-hosting.net:5919/getLectures")
+    axios.get("https://zealous-bikini-ant.cyclic.app/getLectures")
       .then((response) => setLectures(response.data))
       .catch((error) => console.error("Error fetching lectures:", error));
   }, []);
