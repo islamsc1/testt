@@ -135,7 +135,8 @@ header h1 {
   border-radius:25px;
   margin-top:1vh;
   width:30vh;
-  cursor:pointer
+  cursor:pointer;
+  text-wrap: nowrap;
 
 }
 @media only screen and (max-width: 600px) {
